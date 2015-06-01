@@ -66,12 +66,12 @@
     <module>tattletale</module>
     <module>tattletale-ant</module>
     <module>tattletale-maven</module>
+    <module>tattletale-tools-as7</module>
   </modules>
 
   <properties>
     <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.source>1.7</maven.compiler.source>
-
     
     <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
     <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
@@ -83,11 +83,11 @@
   <build>
     <pluginManagement>
       <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>${maven-dependency-plugin.version}</version>
-      </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${maven-dependency-plugin.version}</version>
+        </plugin>
 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -120,11 +120,11 @@
           </configuration>
         </plugin>
 
-	<plugin>
-	  <groupId>org.apache.maven.plugins</groupId>
-	  <artifactId>maven-resources-plugin</artifactId>
-	  <version>2.7</version>
-	</plugin>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-resources-plugin</artifactId>
+	        <version>2.7</version>
+	      </plugin>
       </plugins>
     </pluginManagement>
    </build>

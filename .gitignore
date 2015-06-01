@@ -19,4 +19,4 @@ reports/
 tattletale/target
 tattletale-ant/target
 tattletale-maven/target
-target
+tattletale-tools-as7/target
