@@ -29,13 +29,13 @@
   <packaging>jar</packaging>
   <version>1.2.0.Beta3</version>
 
-  <name>Tattletale</name>
+  <name>Tattletale-core</name>
   <url>http://www.jboss.org/tattletale</url>
 
   <parent>
-      <groupId>org.jboss.tattletale</groupId>
-      <artifactId>tattletale-parent</artifactId>
-      <version>1.2.0.Beta3</version>
+    <groupId>org.jboss.tattletale</groupId>
+    <artifactId>tattletale-parent</artifactId>
+    <version>1.2.0.Beta3</version>
   </parent>
 
   <description>
@@ -51,10 +51,10 @@
   </dependencies>
 
   <build>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-dependency-plugin</artifactId>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
             <id>copy-dependencies</id>
@@ -70,52 +70,52 @@
             </configuration>
           </execution>
         </executions>
-        </plugin>
+      </plugin>
 
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-        </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
 
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <configuration>
-            <archive>
-              <manifest>
-                <!-- Jar file entry point -->
-                <addClasspath>true</addClasspath>
-                <classpathPrefix>lib/</classpathPrefix>
-              </manifest>
-            </archive>
-          </configuration>
-        </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <!-- Jar file entry point -->
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
 
-	<plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-resources-plugin</artifactId>
-	<executions>
-	    <execution>
-		<id>copy-resources</id>
-		<phase>process-resources</phase>
-		<goals>
-		    <goal>copy-resources</goal>
-		</goals>
-		<configuration>
-		    <outputDirectory>${basedir}/target</outputDirectory>
-		    <resources>
-		        <resource>
-		            <directory>${basedir}/src/etc</directory>
-		            <includes>
-		                <include>jboss-tattletale.properties</include>
-		            </includes>
-		        </resource>
-		    </resources>
-		</configuration>
-	    </execution>
-	</executions>
-	</plugin>
-      </plugins>
+	    <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-resources-plugin</artifactId>
+	    <executions>
+	        <execution>
+		    <id>copy-resources</id>
+		    <phase>process-resources</phase>
+		    <goals>
+		        <goal>copy-resources</goal>
+		    </goals>
+		    <configuration>
+		        <outputDirectory>${basedir}/target</outputDirectory>
+		        <resources>
+		            <resource>
+		                <directory>${basedir}/src/etc</directory>
+		                <includes>
+		                    <include>jboss-tattletale.properties</include>
+		                </includes>
+		            </resource>
+		        </resources>
+		    </configuration>
+	        </execution>
+	    </executions>
+	    </plugin>
+    </plugins>
 
     <resources>
       <resource>
@@ -133,5 +133,5 @@
         </includes>
       </resource>
     </resources>
-   </build>
+  </build>
 </project>
