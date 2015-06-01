@@ -87,21 +87,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <version>${maven-dependency-plugin.version}</version>
-        <executions>
-          <execution>
-            <id>copy-dependencies</id>
-            <phase>package</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${project.build.directory}/lib</outputDirectory>
-              <overWriteReleases>false</overWriteReleases>
-              <overWriteSnapshots>false</overWriteSnapshots>
-              <overWriteIfNewer>true</overWriteIfNewer>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
 
         <plugin>
@@ -123,9 +108,7 @@
             <archive>
               <manifest>
                 <!-- Jar file entry point -->
-                <mainClass>org.jboss.tattletale.Main</mainClass>
-                <addClasspath>true</addClasspath>
-                <classpathPrefix>lib/</classpathPrefix>
+                <addClasspath>false</addClasspath>
               </manifest>
               <manifestEntries>
                 <Implementation-Title>JBoss Tattletale</Implementation-Title>
